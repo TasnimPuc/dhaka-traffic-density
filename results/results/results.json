@@ -1,0 +1,200 @@
+{
+  "run": "yolo11s-960",
+  "config": {
+    "project_id": "mimic-cxr-training",
+    "bucket": "mimic-cxr-training-mimic-ckpt",
+    "prefix": "dhaka-traffic",
+    "use_gcs": true,
+    "model": "yolo11s.pt",
+    "imgsz": 960,
+    "epochs": 80,
+    "patience": 25,
+    "batch": 32,
+    "cache": "ram",
+    "seed": 42,
+    "video": "",
+    "video_seconds": 20,
+    "demo": true
+  },
+  "test": {
+    "mAP50": 0.54002399375697,
+    "mAP50-95": 0.36193517855573637,
+    "precision": 0.6405786358184116,
+    "recall": 0.4868300270539203,
+    "ms_per_image": 14.421777516327523
+  },
+  "per_class": [
+    {
+      "class": "three wheelers (CNG)",
+      "AP50": 0.8203925670807612,
+      "AP50-95": 0.5589056448551933,
+      "boxes_train": 2411,
+      "boxes_test": 301
+    },
+    {
+      "class": "car",
+      "AP50": 0.7796054358802128,
+      "AP50-95": 0.5457020278093044,
+      "boxes_train": 4330,
+      "boxes_test": 565
+    },
+    {
+      "class": "bus",
+      "AP50": 0.7513204890442323,
+      "AP50-95": 0.5164457905047456,
+      "boxes_train": 2637,
+      "boxes_test": 367
+    },
+    {
+      "class": "motorbike",
+      "AP50": 0.7414841239982748,
+      "AP50-95": 0.423069593059913,
+      "boxes_train": 1746,
+      "boxes_test": 284
+    },
+    {
+      "class": "truck",
+      "AP50": 0.7375766679008655,
+      "AP50-95": 0.5462075251070023,
+      "boxes_train": 1189,
+      "boxes_test": 183
+    },
+    {
+      "class": "rickshaw",
+      "AP50": 0.6829261174924459,
+      "AP50-95": 0.40974638467470986,
+      "boxes_train": 2739,
+      "boxes_test": 499
+    },
+    {
+      "class": "taxi",
+      "AP50": 0.6811881188118811,
+      "AP50-95": 0.4024422442244224,
+      "boxes_train": 48,
+      "boxes_test": 8
+    },
+    {
+      "class": "auto rickshaw",
+      "AP50": 0.6572921832892396,
+      "AP50-95": 0.4207926204009452,
+      "boxes_train": 262,
+      "boxes_test": 65
+    },
+    {
+      "class": "ambulance",
+      "AP50": 0.6070923589115166,
+      "AP50-95": 0.4009763348902082,
+      "boxes_train": 51,
+      "boxes_test": 6
+    },
+    {
+      "class": "wheelbarrow",
+      "AP50": 0.5256850220063689,
+      "AP50-95": 0.40171676042837945,
+      "boxes_train": 92,
+      "boxes_test": 25
+    },
+    {
+      "class": "minivan",
+      "AP50": 0.5128024572435459,
+      "AP50-95": 0.36529851347399833,
+      "boxes_train": 719,
+      "boxes_test": 113
+    },
+    {
+      "class": "human hauler",
+      "AP50": 0.5091486872287085,
+      "AP50-95": 0.3518160415225519,
+      "boxes_train": 134,
+      "boxes_test": 22
+    },
+    {
+      "class": "pickup",
+      "AP50": 0.49974748074532405,
+      "AP50-95": 0.3427630918160447,
+      "boxes_train": 936,
+      "boxes_test": 147
+    },
+    {
+      "class": "army vehicle",
+      "AP50": 0.4908062234794909,
+      "AP50-95": 0.4681753889674683,
+      "boxes_train": 34,
+      "boxes_test": 5
+    },
+    {
+      "class": "van",
+      "AP50": 0.4893020623269235,
+      "AP50-95": 0.3545383930466855,
+      "boxes_train": 589,
+      "boxes_test": 76
+    },
+    {
+      "class": "suv",
+      "AP50": 0.45004694514330273,
+      "AP50-95": 0.33119311961565,
+      "boxes_train": 672,
+      "boxes_test": 94
+    },
+    {
+      "class": "minibus",
+      "AP50": 0.4308203701625288,
+      "AP50-95": 0.16361523983792797,
+      "boxes_train": 68,
+      "boxes_test": 20
+    },
+    {
+      "class": "bicycle",
+      "AP50": 0.33539111933023885,
+      "AP50-95": 0.17242297333980533,
+      "boxes_train": 345,
+      "boxes_test": 52
+    },
+    {
+      "class": "scooter",
+      "AP50": 0.09253617669459256,
+      "AP50-95": 0.0596867225184057,
+      "boxes_train": 30,
+      "boxes_test": 4
+    },
+    {
+      "class": "policecar",
+      "AP50": 0.005315268368942158,
+      "AP50-95": 0.0031891610213652943,
+      "boxes_train": 28,
+      "boxes_test": 2
+    }
+  ],
+  "data": {
+    "train": 2380,
+    "val": 283,
+    "test": 337
+  },
+  "video": {
+    "frames": 200,
+    "fps": 25.0,
+    "unique_vehicles": 108,
+    "unique_by_class": {
+      "bus": 24,
+      "car": 22,
+      "minivan": 19,
+      "pickup": 15,
+      "suv": 13,
+      "three wheelers (CNG)": 12,
+      "van": 1,
+      "truck": 1,
+      "rickshaw": 1
+    },
+    "crossed_line": 14,
+    "crossed_by_class": {
+      "car": 5,
+      "suv": 4,
+      "bus": 3,
+      "minivan": 2
+    },
+    "mean_score": 93.2,
+    "peak_score": 100.0,
+    "level": "Jam"
+  },
+  "video_synthetic": true
+}

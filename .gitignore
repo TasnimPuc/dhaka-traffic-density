@@ -1,0 +1,8 @@
+outputs/
+runs/
+*.cache
+__pycache__/
+.ipynb_checkpoints/
+.pytest_cache/
+yolo11*.pt
+.env
