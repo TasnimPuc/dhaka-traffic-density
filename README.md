@@ -1,5 +1,7 @@
 # Dhaka Traffic Density Analyzer
 
+![repo health](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/TasnimPuc/bd-rooftop-solar-calculator/main/.github/health/badge.json)
+
 YOLO11 fine-tuned on **Dhaka-AI** (21 local vehicle classes, incl. **rickshaw**, **CNG**, **human hauler**, **auto rickshaw**).
 It goes beyond detection: it **counts** vehicles, gives a **congestion score (0–100)** with a **heatmap**, and counts
 unique vehicles in video with **ByteTrack**.
